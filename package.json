@@ -1,0 +1,34 @@
+{
+  "name": "droner",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node \"./bin/www\""
+  },
+  "dependencies": {
+    "systemjs": "0.19.9",
+    "body-parser": "~1.13.2",
+    "colors": "^0.6",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "joystick": "^0.1.1",
+    "morgan": "~1.6.1",
+    "node-hid": "^0.5.0",
+    "serve-favicon": "~2.3.0",
+    "stylus": "0.42.3",
+    "buffy": "0.0.4",
+    "simple-debug": "~1.1.1",
+    "socket.io": "1.4.5",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "zone.js": "0.5.11",
+    "bootstrap": "^3.3.5",
+    "dronestream": "1.1.1"
+  },
+  "devDependencies": {
+    "concurrently": "*",
+    "typescript": "*"
+  }
+}

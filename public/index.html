@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Droner</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+BatteryPercentage: <input id="inTagBatteryPercentage" type="text" size="3" />
+Altitude: <input id="inTagAltitude" type="text" size="3" />
+ControlState: <input id="inTagControlState" type="text" size="18" />
+FlyState: <input id="inTagFlyState" type="text" size="22"/>
+Yaw: <input id="inTagYaw" type="text" size="3"/>
+Roll: <input id="inTagRoll" type="text" size="3"/>
+Pitch: <input id="inTagPitch" type="text" size="3"/>
+<br/>
+xVelocity<input id="inTagXVelocity" type="text" size="3"/>
+yVelocity<input id="inTagYVelocity" type="text" size="3"/>
+zVelocity<input id="inTagZVelocity" type="text" size="3"/>
+
+<script src="js/socket.io-1.2.0.js"></script>
+<script src="js/jquery-1.11.1.js"></script>
+<script>
+      var socket = io();
+
+      socket.on('dronerStats', function(msg){
+         $('#inTagBatteryPercentage').val(msg.batteryPercentage);
+         $('#inTagAltitude').val(msg.altitude);
+         $('#inTagControlState').val(msg.controlState);
+         $('#inTagFlyState').val(msg.flyState);
+         $('#inTagYaw').val(msg.rotation.yaw);
+         $('#inTagRoll').val(msg.rotation.roll);
+         $('#inTagPitch').val(msg.rotation.pitch);
+         $('#inTagXVelocity').val(msg.velocity.x);
+         $('#inTagYVelocity').val(msg.velocity.y);
+         $('#inTagZVelocity').val(msg.velocity.z);
+      });
+    </script>
+
+<script src="js/nodecopter-client.js"></script>
+<div id="droneStream" style="width: 640px; height: 360px">   </div>
+<script>
+  // video canvas will auto-size to the DOM-node, or default to 640*360 if no size is set.
+  new NodecopterStream(document.getElementById("droneStream"));
+</script>
+
+</body>
+</html>

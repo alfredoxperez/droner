@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
+    script(src="/angular2/angular2-polyfills.js")
+    script(src="/systemjs/system.src.js")
+    script(src="/rxjs/Rx.js")
+    script(src="/angular2/angular2.dev.js")
+    script.
+      System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/boot')
+            .then(null, console.error.bind(console));
