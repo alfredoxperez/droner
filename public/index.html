@@ -6,6 +6,7 @@
   <title>Droner</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/main.css">
 </head>
 <body>
 
@@ -41,7 +42,7 @@ zVelocity<input id="inTagZVelocity" type="text" size="3"/>
     </script>
 
 <script src="js/nodecopter-client.js"></script>
-<div id="droneStream" style="width: 640px; height: 360px">   </div>
+<div id="droneStream"></div>
 <script>
   // video canvas will auto-size to the DOM-node, or default to 640*360 if no size is set.
   new NodecopterStream(document.getElementById("droneStream"));
