@@ -1,6 +1,6 @@
 # DRONER
 
-##TO INSTALL:
+## TO INSTALL:
 ```
 npm install tsd -g
 npm install
