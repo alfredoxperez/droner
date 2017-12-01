@@ -1,5 +1,8 @@
 # DRONER
 
+Droner is an ExpressJS app to control an ardrone drone with a wifi PS4 controller.  Using a headset provides an excellent FPV experience.
+
+
 ## TO INSTALL:
 ```
 npm install tsd -g
